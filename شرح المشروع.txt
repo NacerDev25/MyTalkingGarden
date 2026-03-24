@@ -1,0 +1,33 @@
+App Name: My Talking Garden
+-------------------------
+حاضر يا ناصر، قمت بصياغة "البرومبت" (Prompt) بشكل احترافي ودقيق جداً ليعطيك أفضل كود من Gemini CLI. هذا البرومبت يركز على استخدام Next.js، Tailwind CSS، والاعتماد كلياً على الواجهة الأمامية (Frontend Only) مع ملف بيانات محلي، ليكون التطبيق سريعاً ويعمل حتى بدون إنترنت.
+​إليك النص الذي يمكنك نسخه ولصقه مباشرة:
+​📥 البرومبت الموجه لـ Gemini CLI:
+​Role: Senior Frontend Developer & UX Expert specialized in Educational Apps and Web Accessibility (A11y).
+​Task: Build a high-performance Next.js "Animal Learning Web App" for a toddler, designed to run as a PWA with NO external database.
+​Technical Specifications:
+​Data Architecture: Use a local constants/animals.ts file to store an array of animal objects. Each object must have: id, name (in Arabic), soundPath, imagePath, and category.
+​Categories: Implement 3 main navigation tabs:
+​"الـحـيـوانـات الألـيـفـة" (Pets)
+​"حـيـوانـات الـغـابـة" (Wild)
+​"الـحـيـوانـات الـمـائـيـة" (Sea)
+​UI/UX Design:
+​AnimalCard Component: A clean card with a high-quality image, a large bold Arabic label (e.g., قِـطّة), and a prominent "Play" icon.
+​Styling: Use a child-friendly color palette (Pastel colors) via Tailwind CSS.
+​Animations: Use Framer Motion for smooth transitions between categories and a "bounce" effect when clicking animal icons.
+​Core Functionality:
+​Audio Playback: Use the standard HTML5 Audio API to play sounds from the /public/sounds/ folder.
+​Text-to-Speech (TTS): Integrate the Web Speech API to announce the animal's name in a clear Arabic voice when the name is clicked.
+​Responsiveness: Optimize for mobile and tablet touch-points (Large buttons, No hover states needed).
+​Accessibility (A11y): Ensure proper semantic HTML, high contrast for text, and ARIA labels.
+​Deliverables:
+​The structure for constants/animals.ts with 3 sample animals per category.
+​A reusable AnimalCard.tsx component.
+​The main page.tsx implementing the category filtering logic.
+​Tailwind configuration for the pastel theme.
+​Instructions on where to place .mp3 and .jpg files in the /public directory.
+​Output Language: Please provide code comments and UI strings in Arabic.
+​💡 ملاحظات لك يا ناصر بعد نسخ الكود:
+​المجلد العام (Public): بعد أن ينشئ لك الجيمناي الكود، تذكر أن تنشئ مجلدين داخل public: واحد باسم sounds للأصوات وواحد باسم images للصور.
+​التشغيل: بمجرد تشغيل npm run dev سيعمل التطبيق فوراً.My-Talking-Garden
+​قم بمسح الـ / واجعل الاسم هكذا: My-Talking-Garden.
