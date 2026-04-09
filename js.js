@@ -1,19 +1,19 @@
 // بيانات الحيوانات مع روابط صور كرتونية عالية الجودة
 const ANIMALS = [
     // الـحـيـوانـات الألـيـفـة
-    { id: "cat", name: "قِـطّة", category: "pets", imagePath: "https://img.icons8.com/color/512/cat--v1.png", soundPath: "cat meow.mp3" },
-    { id: "dog", name: "كَـلـب", category: "pets", imagePath: "https://img.icons8.com/color/512/dog--v1.png", soundPath: "sounds/dog.mp3" },
-    { id: "rabbit", name: "أَرْنَـب", category: "pets", imagePath: "https://img.icons8.com/color/512/rabbit.png", soundPath: "sounds/rabbit.mp3" },
+    { id: "cat", name: "قِـطّة", category: "pets", imagePath: "https://img.icons8.com/color/512/cat--v1.png", soundPath: "cat-meow.mp3" },
+    { id: "dog", name: "كَـلـب", category: "pets", imagePath: "https://img.icons8.com/color/512/dog--v1.png", soundPath: "dog.mp3" },
+    { id: "rabbit", name: "أَرْنَـب", category: "pets", imagePath: "https://img.icons8.com/color/512/rabbit.png", soundPath: "rabbit.mp3" },
     
     // حـيـوانـات الـغـابـة
-    { id: "lion", name: "أَسَـد", category: "wild", imagePath: "https://img.icons8.com/color/512/lion.png", soundPath: "sounds/lion.mp3" },
-    { id: "elephant", name: "فِـيـل", category: "wild", imagePath: "https://img.icons8.com/color/512/elephant.png", soundPath: "sounds/elephant.mp3" },
-    { id: "monkey", name: "قِـرْد", category: "wild", imagePath: "https://img.icons8.com/color/512/monkey.png", soundPath: "sounds/monkey.mp3" },
+    { id: "lion", name: "أَسَـد", category: "wild", imagePath: "https://img.icons8.com/color/512/lion.png", soundPath: "lion.mp3" },
+    { id: "elephant", name: "فِـيـل", category: "wild", imagePath: "https://img.icons8.com/color/512/elephant.png", soundPath: "elephant.mp3" },
+    { id: "monkey", name: "قِـرْد", category: "wild", imagePath: "https://img.icons8.com/color/512/monkey.png", soundPath: "monkey.mp3" },
     
     // الـحـيـوانـات الـمـائـيـة
-    { id: "dolphin", name: "دُلْـفِـيـن", category: "sea", imagePath: "https://img.icons8.com/color/512/dolphin.png", soundPath: "sounds/dolphin.mp3" },
-    { id: "whale", name: "حُـوت", category: "sea", imagePath: "https://img.icons8.com/color/512/whale.png", soundPath: "sounds/whale.mp3" },
-    { id: "shark", name: "قِرْش", category: "sea", imagePath: "https://img.icons8.com/color/512/shark.png", soundPath: "sounds/shark.mp3" },
+    { id: "dolphin", name: "دُلْـفِـيـن", category: "sea", imagePath: "https://img.icons8.com/color/512/dolphin.png", soundPath: "dolphin.mp3" },
+    { id: "whale", name: "حُـوت", category: "sea", imagePath: "https://img.icons8.com/color/512/whale.png", soundPath: "whale.mp3" },
+    { id: "shark", name: "قِرْش", category: "sea", imagePath: "https://img.icons8.com/color/512/shark.png", soundPath: "shark.mp3" },
 ];
 
 // ألوان الحواف حسب التصنيف

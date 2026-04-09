@@ -165,6 +165,17 @@ footer {
 
 /* Responsive */
 @media (max-width: 600px) {
-    .main-title { font-size: 2.5rem; }
-    .tab-btn { width: 100%; }
+    .main-title { font-size: 2.2rem; }
+    .subtitle { font-size: 1rem; }
+    .categories { gap: 10px; }
+    .tab-btn { 
+        flex: 1 1 45%; 
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+    .animals-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    .animal-name { font-size: 1.4rem; }
 }
