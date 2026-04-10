@@ -23,16 +23,42 @@ const CATEGORY_COLORS = {
     sea: "#9BF6FF"
 };
 
+// إعدادات شاشة البدء لتفعيل الصوت في الهواتف
+const startOverlay = document.getElementById('start-overlay');
+const startBtn = document.getElementById('start-btn');
+
+startBtn.addEventListener('click', () => {
+    // تفعيل مشغل الصوت (تشغيل صامت لمرة واحدة لفك القفل)
+    audioPlayer.src = ""; 
+    audioPlayer.play().catch(() => {});
+
+    // تفعيل محرك النطق (نطق فارغ لفك القفل)
+    const silentUtterance = new SpeechSynthesisUtterance("");
+    window.speechSynthesis.speak(silentUtterance);
+
+    // إخفاء الشاشة
+    startOverlay.style.opacity = '0';
+    setTimeout(() => {
+        startOverlay.style.display = 'none';
+    }, 500);
+});
+
 const animalsGrid = document.getElementById('animals-grid');
 const tabButtons = document.querySelectorAll('.tab-btn');
 
 let activeCategory = 'pets';
 
+// كائن صوتي واحد لإعادة استخدامه (أفضل للهواتف)
+const audioPlayer = new Audio();
+
 // دالة لتشغيل الصوت (مع محاولة تشغيله فقط إذا كان الملف موجوداً)
 function playSound(path) {
-    const audio = new Audio(path);
-    audio.play().catch(err => {
-        console.log("صوت MP3 غير موجود حالياً، سأكتفي بالنطق الصوتي.");
+    if (!path) return;
+    
+    audioPlayer.src = path;
+    audioPlayer.load(); // تحميل الملف أولاً لضمان الجاهزية
+    audioPlayer.play().catch(err => {
+        console.log("صوت MP3 غير موجود أو تم منعه:", path);
     });
 }
 
@@ -43,9 +69,13 @@ function speakName(name) {
     
     const utterance = new SpeechSynthesisUtterance(name);
     utterance.lang = "ar-SA";
-    utterance.pitch = 1.2; // جعل الصوت طفولياً قليلاً
-    utterance.rate = 0.9;  // جعل النطق أبطأ قليلاً ليفهمه الطفل
-    window.speechSynthesis.speak(utterance);
+    utterance.pitch = 1.1; 
+    utterance.rate = 0.8;  
+    
+    // التأكد من أن النطق يبدأ بعد انتهاء الإلغاء السابق
+    setTimeout(() => {
+        window.speechSynthesis.speak(utterance);
+    }, 50);
 }
 
 // دالة لإنشاء بطاقة الحيوان
@@ -67,16 +97,24 @@ function createAnimalCard(animal) {
         </div>
     `;
 
-    const handleInteraction = () => {
-        speakName(animal.name);
+    const handleInteraction = (e) => {
+        // منع السلوك الافتراضي لضمان استجابة أسرع على الهواتف
+        if (e) e.stopPropagation();
+
+        // تشغيل صوت الحيوان أولاً (أكثر حساسية في الهواتف)
         playSound(animal.soundPath);
+        
+        // ثم نطق الاسم بعد تأخير بسيط جداً لضمان عدم التداخل
+        setTimeout(() => {
+            speakName(animal.name);
+        }, 100);
     };
 
     card.addEventListener('click', handleInteraction);
     card.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            handleInteraction();
+            handleInteraction(e);
         }
     });
 
