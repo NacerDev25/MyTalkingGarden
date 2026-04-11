@@ -4,6 +4,7 @@ const ANIMALS = [
     { id: "cat", name: "قِـطّة", category: "pets", imagePath: "https://img.icons8.com/color/512/cat--v1.png", soundPath: "cat-meow.mp3" },
     { id: "dog", name: "كَـلـب", category: "pets", imagePath: "https://img.icons8.com/color/512/dog--v1.png", soundPath: "dog.mp3" },
     { id: "horse", name: "حِـصَـان", category: "pets", imagePath: "https://img.icons8.com/color/512/horse.png", soundPath: "dragon-studio-horse-neigh-515279.mp3" },
+    { id: "bird", name: "عُـصْـفُـور", category: "pets", imagePath: "https://img.icons8.com/color/512/bird.png", soundPath: "audiopapkin-blackbird-singing-296516.mp3" },
     
     // حـيـوانـات الـغـابـة
     { id: "lion", name: "أَسَـد", category: "wild", imagePath: "https://img.icons8.com/color/512/lion.png", soundPath: "lion.mp3" },
