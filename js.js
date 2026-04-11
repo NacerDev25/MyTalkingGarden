@@ -3,7 +3,7 @@ const ANIMALS = [
     // الـحـيـوانـات الألـيـفـة
     { id: "cat", name: "قِـطّة", category: "pets", imagePath: "https://img.icons8.com/color/512/cat--v1.png", soundPath: "cat-meow.mp3" },
     { id: "dog", name: "كَـلـب", category: "pets", imagePath: "https://img.icons8.com/color/512/dog--v1.png", soundPath: "dog.mp3" },
-    { id: "rabbit", name: "أَرْنَـب", category: "pets", imagePath: "https://img.icons8.com/color/512/rabbit.png", soundPath: "rabbit.mp3" },
+    { id: "horse", name: "حِـصَـان", category: "pets", imagePath: "https://img.icons8.com/color/512/horse.png", soundPath: "dragon-studio-horse-neigh-515279.mp3" },
     
     // حـيـوانـات الـغـابـة
     { id: "lion", name: "أَسَـد", category: "wild", imagePath: "https://img.icons8.com/color/512/lion.png", soundPath: "lion.mp3" },
